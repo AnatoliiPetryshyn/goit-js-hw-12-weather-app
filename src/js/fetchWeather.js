@@ -1,4 +1,4 @@
-const baseUrl = 'http://api.apixu.com/v1/';
+const baseUrl = 'https://api.apixu.com/v1/';
 const apiKey = 'key=3cb596775cee4eedbcf112350191407';
 const currentweather = 'current.json?';
 

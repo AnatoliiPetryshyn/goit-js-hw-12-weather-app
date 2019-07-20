@@ -9,6 +9,11 @@
   align-items: center;
 }
 
+.weather__title {
+  color: #555555;
+  margin: 0;
+}
+
 .weather__parameters {
   font-size: 2.5rem;
   color: #777777;
