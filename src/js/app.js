@@ -47,7 +47,9 @@ function fetch(value) {
       refs.weatherSection.innerHTML = '';
       refs.weatherSection.insertAdjacentHTML('beforeend', markup);
     })
-    .catch(error => PNotify.error(`${error}`));
+    .catch(error => {
+      PNotify.error(`${error.message}`);
+    });
 
   refs.weatherSection.classList.remove('is-hidden');
 }

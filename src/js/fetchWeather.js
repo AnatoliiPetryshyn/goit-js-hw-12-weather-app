@@ -7,7 +7,7 @@ function fetchWeather(query) {
   return fetch(baseUrl + currentweather + apiKey + queryParam).then(
     response => {
       if (response.ok) return response.json();
-      throw new Error(response.statusText);
+      throw new Error('Network response was not ok.');
     },
   );
 }
