@@ -1,0 +1,17 @@
+.weather.is-hidden {
+  display: none;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather__parameters {
+  font-size: 2.5rem;
+  color: #777777;
+  margin: 0;
+  margin-bottom: 1rem;
+}
