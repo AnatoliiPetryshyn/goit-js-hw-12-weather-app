@@ -1,7 +1,17 @@
 <h2 class="weather__title">Current weather</h2>
-<img class="icon" src="https:{{current.condition.icon}}" alt="{{current.condition.text}}" />
+<img class="icon" src="{{#with current.weather_icons}}
+        {{0}}
+      {{/with}}" alt="{{#with current.weather_descriptions}}
+        {{0}}
+      {{/with}}" />
 <p class="weather__parameters">Location: <span data-field="location">{{location.name}}</span></p>
-<p class="weather__parameters">Temperature: <span data-field="temp">{{current.temp_c}} &#8451;</span></p>
+<p class="weather__parameters">Temperature: <span data-field="temp">{{current.temperature}} &#8451;</span></p>
 <p class="weather__parameters">Humidity: <span data-field="humidity">{{current.humidity}} %</span></p>
-<p class="weather__parameters">Wind: <span data-field="wind">{{current.wind_kph}} kph</span></p>
-<p class="weather__parameters">Conditions: <span data-field="conditions">{{current.condition.text}}</span></p>
+<p class="weather__parameters">Wind: <span data-field="wind">{{current.wind_speed}} kph</span></p>
+<p class="weather__parameters">Conditions:
+  <span data-field="conditions">
+    {{#with current.weather_descriptions}}
+    {{0}}
+    {{/with}}
+  </span>
+</p>

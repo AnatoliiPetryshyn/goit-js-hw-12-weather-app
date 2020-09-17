@@ -1,9 +1,9 @@
-const baseUrl = 'https://api.apixu.com/v1/';
-const apiKey = 'key=3cb596775cee4eedbcf112350191407';
-const currentweather = 'current.json?';
+const baseUrl = 'http://api.weatherstack.com/';
+const apiKey = 'access_key=0979667ce34bb3a5fd10e72265e85685';
+const currentweather = 'current?';
 
 function fetchWeather(query) {
-  const queryParam = `&q=${query}`;
+  const queryParam = `&query=${query}`;
   return fetch(baseUrl + currentweather + apiKey + queryParam).then(
     response => {
       if (response.ok) return response.json();

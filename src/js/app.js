@@ -1,5 +1,7 @@
 import PNotify from 'pnotify/dist/es/PNotify.js';
-import 'pnotify/dist/es/PNotifyStyleMaterial.js';
+import PNotifyStyleMaterial from 'pnotify/dist/es/PNotifyStyleMaterial.js';
+import 'pnotify/dist/PNotifyBrightTheme.css';
+import 'material-design-icons/iconfont/material-icons.css';
 import getGeoPosition from './getGeoPosition';
 import fetchWeather from './fetchWeather';
 import currentWeatherTemplate from '../templates/currentWeatherTemplates.hbs';
@@ -48,7 +50,10 @@ function fetch(value) {
       refs.weatherSection.insertAdjacentHTML('beforeend', markup);
     })
     .catch(error => {
-      PNotify.error(`${error.message}`);
+      PNotify.error({
+        title: 'Oh No!',
+        text: error,
+      });
     });
 
   refs.weatherSection.classList.remove('is-hidden');
