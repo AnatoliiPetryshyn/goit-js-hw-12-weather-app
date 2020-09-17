@@ -1,4 +1,4 @@
-const baseUrl = 'http://api.weatherstack.com/';
+const baseUrl = 'https://api.weatherstack.com/';
 const apiKey = 'access_key=0979667ce34bb3a5fd10e72265e85685';
 const currentweather = 'current?';
 
